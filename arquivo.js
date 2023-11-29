@@ -30,7 +30,7 @@ function carregarDados() {
     const tdBotoes = criarElemento('td');
     const btnVendido = criarElemento('button', 'Vendido');
     
-    // Adicionando um evento de clique ao botão "Vendido" para selecionar a quantidade
+    
     btnVendido.addEventListener('click', function () {
       const quantidadeVendida = prompt('Informe a quantidade vendida:', '1');
       if (quantidadeVendida !== null) {
@@ -51,7 +51,7 @@ function carregarDados() {
   });
 }
 
-// Função auxiliar para formatar valores como moeda
+
 function formatarMoeda(valor) {
   return 'R$ ' + valor.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }
@@ -65,7 +65,7 @@ function venderProduto(index, quantidadeVendida) {
   }
   dados[index].estoque -= quantidadeVendida;
 
-  // Verifica se o estoque chegou a 0 e, se sim, zera todos os campos
+  
   if (dados[index].estoque === 0) {
     dados[index].nome = '';
     dados[index].estoque = 0;
