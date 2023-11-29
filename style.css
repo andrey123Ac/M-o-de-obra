@@ -89,7 +89,7 @@ th {
   background-color: #f2f2f2;
 }
 
-/* Adição de CSS para tornar a tabela responsiva */
+
 @media (max-width: 768px) {
   table {
     overflow-x: auto;
