@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Calculadora e Estoque</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Calculadora e Estoque</h1>
+
+    <form id="formulario">
+      <div class="campo">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" placeholder="Insira o nome" required>
+      </div>
+
+      <div class="campo">
+        <label for="dias">Dias de Trabalho:</label>
+        <input type="number" id="dias" placeholder="Insira o número de dias" required>
+      </div>
+
+      <div class="campo">
+        <label for="horas">Horas por Dia:</label>
+        <input type="number" id="horas" placeholder="Insira as horas por dia" required>
+      </div>
+
+      <div class="campo">
+        <label for="estoque">Estoque Inicial:</label>
+        <input type="number" id="estoque" placeholder="Insira o estoque inicial" required>
+      </div>
+
+      <div class="campo">
+        <label for="custoMateriais">Custo de Materiais:</label>
+        <input type="number" id="custoMateriais" placeholder="Insira o custo de materiais" required>
+      </div>
+
+      <div class="campo">
+        <label for="margemLucro">Margem de Lucro (%):</label>
+        <input type="number" id="margemLucro" placeholder="Insira a margem de lucro" required>
+      </div>
+
+      <div class="botoes">
+        <button type="button" onclick="calcularCusto()">Calcular</button>
+      </div>
+    </form>
+
+    <p id="resultado"></p>
+
+    <table id="tabela-dados">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Estoque Inicial</th>
+          <th>Custo Total</th>
+          <th>Custo por Unidade</th>
+          <th>Preço de Venda</th>
+          <th>Preço de Venda por Unidade</th>
+          <th>Mão de Obra Direta</th>
+          <th>Ações</th>
+
+        </tr>
+      </thead>
+      <tbody id="corpo-tabela"></tbody>
+    </table>
+  </div>
+
+  <script src="arquivo.js"></script>
+</body>
+</html>
